@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Simulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .weather-container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .temp {
+      font-size: 50px;
+      font-weight: bold;
+      color: #333;
+    }
+    .condition {
+      font-size: 25px;
+      color: #666;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="weather-container">
+    <h1>Weather Simulation</h1>
+    <div class="temp" id="temp">--°C</div>
+    <div class="condition" id="condition">Loading...</div>
+    <button onclick="eval(_0xdec7());">Generate Weather</button>
+  </div>
+
+  <script>
+    function _0xdec7() {
+      const _0xabc1 = [
+        '\x74\x65\x6D\x70', '\x63\x6F\x6E\x64\x69\x74\x69\x6F\x6E',
+        '\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74', '\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64',
+        '\x53\x75\x6E\x6E\x79', '\x43\x6C\x6F\x75\x64\x79', '\x52\x61\x69\x6E\x79', '\x57\x69\x6E\x64\x79', '\x53\x6E\x6F\x77\x79'
+      ];
+      const _0xf = Math['\x72\x61\x6E\x64\x6F\x6D']();
+      const _0xrandomTemp = (_0xf * 50 - 10) ;
+      const _0xweatherTypes = [_0xabc1[4], _0xabc1[5], _0xabc1[6], _0xabc1[7], _0xabc1[8]];
+      const _0xrandomCondition = _0xweatherTypes[Math['\x66\x6C\x6F\x6F\x72'](_0xf * _0xweatherTypes['\x6C\x65\x6E\x67\x74\x68'])];
+      return `
+        document['${_0xabc1[3]}']('${_0xabc1[0]}')['${_0xabc1[2]}'] = '${_0xrandomTemp}°C';
+        document['${_0xabc1[3]}']('${_0xabc1[1]}')['${_0xabc1[2]}'] = '${_0xrandomCondition}';
+      `;
+    }
+  </script>
+</body>
+</html>
